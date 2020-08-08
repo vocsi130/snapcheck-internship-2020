@@ -1,0 +1,18 @@
+public String encryp(String ch) {
+ch=ch.replaceAll("\\s+", "");
+double t=Math.sqrt(ch.length());
+int c=(int) Math.ceil(t);
+int f=(int) Math.floor(t);
+String str="";
+for(int i=0;i<=f;i++) {
+String temp="";
+	int j=i;
+	while(j<ch.length()) {
+	temp+=ch.charAt(j);	
+	j=j+c;
+	}
+	str+=" "+temp;
+}
+return str;
+	
+}
